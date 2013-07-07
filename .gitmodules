@@ -1,3 +1,9 @@
 [submodule "wordpress"]
 	path = wordpress
 	url = https://github.com/WordPress/WordPress.git
+[submodule "content/plugins/backupwordpress"]
+	path = content/plugins/backupwordpress
+	url = git@github.com:humanmade/backupwordpress.git
+[submodule "content/plugins/backupwordpress-pro"]
+	path = content/plugins/backupwordpress-pro
+	url = git@github.com:humanmade/backupwordpress-pro.git
