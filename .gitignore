@@ -1,12 +1,5 @@
 .DS_Store
-
 .htaccess
-xmlrpc.php
-blogs.dir/
 upgrade/
-sitemap.xml
-sitemap.xml.gz
 uploads/
 wp-config-local.php
-content/object-cache.php
-wpremote
