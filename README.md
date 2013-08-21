@@ -25,3 +25,14 @@ Run unit tests:
 * Define the WP_TESTS_DIR env var: `export WP_TESTS_DIR=/srv/www/wp-tests`
 * Change back to the backupwordpress plugin directory: `cd content/plugins/backupwordpress`
 * run the unit tests`phpunit`
+* 
+
+Getting setup with SVN so you can release to the plugins directory.
+
+Because BackUpWordPress uses submodules we can't use `git-svn` instead we simply run both SVN and git side-by-side in the same repo.
+
+* Checkout the `trunk` folder from svn into the existing backupwordpress plugin with `svn co https://plugins.svn.wordpress.org/backupwordpress/trunk content/plugins/backupwordpress --force`
+* You'll want to svn:ignore any unit test or `.git` files or folders
+* Commit atomic changes as normal to git.
+* When you are ready to release, commit everything to svn trunk at once.
+* Then copy to a tag with `svn cp content/plugins/backupwordpress https://plugins.svn.wordpress.org/backupwordpress/tags/x.y.z -m "Tagging x.y.z of backupwordpress".`
