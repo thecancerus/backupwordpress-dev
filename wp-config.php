@@ -94,17 +94,21 @@ define( 'WPLANG', '' );
  * It is strongly recommended that plugin and theme developers use WP_DEBUG
  * in their development environments.
  */
-if ( defined( 'HM_DEV' ) && HM_DEV )
+if ( defined( 'HM_DEV' ) && HM_DEV ) {
 	define( 'WP_DEBUG', true );
-
-else
+	define('WP_DEBUG_LOG', true);
+	define( 'WP_DEBUG_DISPLAY', false );
+} else {
 	define( 'WP_DEBUG', false );
+}
 
 if ( ! defined( 'WP_SITEURL' ) )
 	define( 'WP_SITEURL', 'http://' . $_SERVER['HTTP_HOST'] . '/wordpress' );
 
 if ( ! defined( 'WP_HOME' ) )
 	define( 'WP_HOME', 'http://' . $_SERVER['HTTP_HOST'] );
+
+define( 'WP_DEBUG_LOG', true );
 
 // Set path & url for Content
 define( 'WP_CONTENT_DIR', dirname( __FILE__ ) . '/content' );
@@ -118,7 +122,7 @@ define( 'WP_DEFAULT_THEME', 'twentytwelve' );
 
 // Prevent editing of files through the admin.
 define( 'DISALLOW_FILE_EDIT', true );
-
+//define( 'HMBKP_PATH', '/srv/www' );
 /* That's all, stop editing! Happy blogging. */
 
 /** Absolute path to the WordPress directory. */
