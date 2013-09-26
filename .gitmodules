@@ -10,3 +10,6 @@
 	path = content/plugins/backupwordpress
 	url = git@github.com:humanmade/backupwordpress.git
 	branch = master
+[submodule "content/plugins-mu/hm-dev"]
+	path = content/plugins-mu/hm-dev
+	url = git://github.com/humanmade/hm-dev.git
